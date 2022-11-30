@@ -1,0 +1,54 @@
+{
+    "id": "integer\nThe unique CoinMarketCap ID for this cryptocurrency.",
+    "name": "string\nThe name of this cryptocurrency.",
+    "symbol": "string\nThe ticker symbol for this cryptocurrency.",
+    "slug": "string\nThe web URL friendly shorthand version of this cryptocurrency name.",
+    "cmc_rank": "integer\nThe cryptocurrency's CoinMarketCap rank by market cap.",
+    "num_market_pairs": "integer\nThe number of active trading pairs available for this cryptocurrency across supported exchanges.",
+    "circulating_supply": "number\nThe approximate number of coins circulating for this cryptocurrency.",
+    "total_supply": "number\nThe approximate total amount of coins in existence right now (minus any coins that have been verifiably burned).",
+    "market_cap_by_total_supply": "number\nThe market cap by total supply. This field is only returned if requested through the aux request parameter.",
+    "max_supply": "number\nThe expected maximum limit of coins ever to be available for this cryptocurrency.",
+    "last_updated": "string <date>\nTimestamp (ISO 8601) of the last time this cryptocurrency's market data was updated.",
+    "date_added": "string <date>\nTimestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
+    "tags": "Array of tags associated with this cryptocurrency. Currently only a mineable tag will be returned if the cryptocurrency is mineable. Additional tags will be returned in the future.",
+    "self_reported_circulating_supply": "number\nThe self reported number of coins circulating for this cryptocurrency.",
+    "self_reported_market_cap": "number\nThe self reported market cap for this cryptocurrency.",
+    "tvl_ratio": "number\nPercentage of Total Value Locked",
+    "platform": [
+        "Metadata about the parent cryptocurrency platform this cryptocurrency belongs to if it is a token, otherwise null.",
+        {
+            "id": "integer\nThe unique CoinMarketCap ID for the parent platform cryptocurrency.",
+            "name": "string\nThe name of the parent platform cryptocurrency.",
+            "symbol": "string\nThe ticker symbol for the parent platform cryptocurrency.",
+            "slug": "string\nThe web URL friendly shorthand version of the parent platform cryptocurrency name.",
+            "token_address": "string\nThe token address on the parent platform cryptocurrency."
+        }
+    ],
+    "quote": [
+        "A map of market quotes in different currency conversions. The default map included is USD.",
+        {
+            "$key": [
+                "A market quote in the currency conversion option.",
+                {
+                    "price": "number\nPrice in the specified currency for this historical.",
+                    "volume_24h": "number\nRolling 24 hour adjusted volume in the specified currency.",
+                    "volume_change_24h": "number\n24 hour change in the specified currencies volume.",
+                    "volume_24h_reported": "number\nRolling 24 hour reported volume in the specified currency. This field is only returned if requested through the aux request parameter.",
+                    "volume_7d": "number\nRolling 7 day adjusted volume in the specified currency. This field is only returned if requested through the aux request parameter.",
+                    "volume_7d_reported": "number\nRolling 7 day reported volume in the specified currency. This field is only returned if requested through the aux request parameter.",
+                    "volume_30d": "number\nRolling 30 day adjusted volume in the specified currency. This field is only returned if requested through the aux request parameter.",
+                    "volume_30d_reported": "number\nRolling 30 day reported volume in the specified currency. This field is only returned if requested through the aux request parameter.",
+                    "market_cap": "number\nMarket cap in the specified currency.",
+                    "market_cap_dominance": "number\nMarket cap dominance in the specified currency.",
+                    "fully_diluted_market_cap": "number\nFully diluted market cap in the specified currency.",
+                    "tvl": "number\nTotal Value Locked",
+                    "percent_change_1h": "number\n1 hour change in the specified currency.",
+                    "percent_change_24h": "number\n24 hour change in the specified currency.",
+                    "percent_change_7d": "number\n7 day change in the specified currency.",
+                    "last_updated": "string <date>\nTimestamp (ISO 8601) of when the conversion currency's current value was referenced."
+                }
+            ]
+        }
+    ]
+}
