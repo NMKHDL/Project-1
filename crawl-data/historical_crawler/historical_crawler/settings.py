@@ -15,7 +15,7 @@ NEWSPIDER_MODULE = 'historical_crawler.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'historical_crawler (+http://www.yourdomain.com)'
-USER_AGENT='historical_crawler (http://example.com)'
+# USER_AGENT='historical_crawler (http://example.com)'
 
 
 # Obey robots.txt rules
