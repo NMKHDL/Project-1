@@ -5,6 +5,7 @@ import scrapy
 from datetime import date, timedelta
 import datetime
 from datetime import timezone
+from time import sleep
 
 import pandas as pd
 
@@ -98,6 +99,7 @@ class coinHistoricalData(scrapy.Spider):
             for urlInfo in url_list:
                 filename = f"{urlInfo['str_startTime'].split(' ')[0]}.json"
                 filepath = f'{coinIDPath}/{filename}'
+                sleep(2.5)
                 yield scrapy.Request(
                     url=urlInfo['url'], 
                     callback=self.parse, headers=headers,
