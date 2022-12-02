@@ -1,1 +1,4 @@
 crawl-data/data/historical-data/
+.vscode/
+.DS_Store
+crawl-data/.DS_Store
