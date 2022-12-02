@@ -1,0 +1,20 @@
+{
+    "id": "integer\nThe unique cryptocurrency ID for this cryptocurrency.",
+    "name": "string\nThe name of this cryptocurrency.",
+    "symbol": "string\nThe ticker symbol for this cryptocurrency, always in all caps.",
+    "slug": "string\nThe web URL friendly shorthand version of this cryptocurrency name.",
+    "is_active": "integer [ 0 .. 1 ]\n1 if this cryptocurrency has at least 1 active market currently being tracked by the platform, otherwise 0. A value of 1 is analogous with listing_status=active.",
+    "status": "string\n\"active\" \"inactive\" \"untracked\"\nThe listing status of the cryptocurrency. This field is only returned if requested through the aux request parameter.",
+    "first_historical_data": "string <date>\nTimestamp (ISO 8601) of the date this cryptocurrency was first available on the platform.",
+    "last_historical_data": "string <date>\nTimestamp (ISO 8601) of the last time this cryptocurrency's market data was updated.",
+    "platform": [
+        "Metadata about the parent cryptocurrency platform this cryptocurrency belongs to if it is a token, otherwise null.",
+        {
+            "id": "integer\nThe unique CoinMarketCap ID for the parent platform cryptocurrency.",
+            "name": "string\nThe name of the parent platform cryptocurrency.",
+            "symbol": "string\nThe ticker symbol for the parent platform cryptocurrency.",
+            "slug": "string\nThe web URL friendly shorthand version of the parent platform cryptocurrency name.",
+            "token_address": "string\nThe token address on the parent platform cryptocurrency."
+        }
+    ]
+}

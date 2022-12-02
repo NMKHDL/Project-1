@@ -1,0 +1,8 @@
+{
+    "listing_status": "string\nDefault: \"active\"\nOnly active cryptocurrencies are returned by default. Pass inactive to get a list of cryptocurrencies that are no longer active. Pass untracked to get a list of cryptocurrencies that are listed but do not yet meet methodology requirements to have tracked markets available. You may pass one or more comma-separated values.",
+    "start": "integer >= 1\nDefault: 1\nOptionally offset the start (1-based index) of the paginated list of items to return.",
+    "limit": "integer [ 1 .. 5000 ]\nOptionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
+    "sort": "string\nDefault: \"id\"\n\"cmc_rank\" \"id\"\nWhat field to sort the list of cryptocurrencies by.",
+    "symbol": "string\nOptionally pass a comma-separated list of cryptocurrency symbols to return CoinMarketCap IDs for. If this option is passed, other options will be ignored.",
+    "aux": "string\nDefault: \"platform,first_historical_data,last_historical_data,is_active\"\nOptionally specify a comma-separated list of supplemental data fields to return. Pass platform,first_historical_data,last_historical_data,is_active,status to include all auxiliary fields."
+}
