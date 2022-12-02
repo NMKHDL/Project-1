@@ -4,3 +4,5 @@ crawl-data/data/
 .DS_Store
 crawl-data/.DS_Store
 crawl-data/data.zip
+crawl-data/.ipynb_checkpoints
+.ipynb_checkpoints
